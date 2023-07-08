@@ -1,0 +1,20 @@
+<div 
+[ngClass]="{
+    'grabbed': mozog,
+    'not-grabbed': !mozog,
+    'teljesitve': teljesitve
+  }"
+  [ngStyle]="{
+    'position':'relative',
+    'top.px':yPozicio,
+    'left.px':xPozicio
+  }"
+(mouseup)="egerFelengedve()"
+(mousedown)="egerLenyomva()"
+(mousemove)="egerMozog($event)"
+>
+
+    <h1>{{ adataim }}</h1>
+    <button *ngIf="!teljesitve" (click)="teljesitveEvent($event)">Teljesítve</button>
+    <button (click)="torlesEvent(index)">Törlés</button>
+</div>

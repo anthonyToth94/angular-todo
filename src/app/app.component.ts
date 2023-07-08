@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todo';
+
+  adatok :string[] = [];
+
+  //Create
+  kijottAdat(adat: string)
+  {
+    this.adatok.push(adat);
+  }
+
+  //Delete
+  kimenoIndexTorlese(index:number){
+    this.adatok.splice(index, 1);
+  }
 }

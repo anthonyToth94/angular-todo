@@ -1,0 +1,64 @@
+.container{
+    width:90%;
+    margin:auto;
+}
+
+.kuka-container {
+    left: 600px;
+    top: 250px;
+    width: 220px;
+    height: 420px;
+    position: relative;
+
+   /* background: green; */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .kuka-alja {
+    width: 200px;
+    height: 300px;
+    background: linear-gradient(to left, #1b1b1b, #b6b6b6);
+    position: absolute;
+    bottom: 0;
+    transition: transform 0.5s ease;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .kuka-teteje {
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(to right, #3f3f3f, #020202);
+    position: absolute;
+    top: 70px;
+    transition: transform 1s ease;
+  }
+  
+  .kuka-container:hover .kuka-teteje {
+    animation: shake-rotate 1s alternate;
+  }
+  
+  @keyframes shake-rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-10deg);
+      top: 20px;
+    }
+    75% {
+        transform: rotate(10deg);
+        top: 20px;
+      }
+    100% {
+        transform: rotate(0deg);
+      }
+      
+  }
+  
+  .kuka-alja p{
+    font-size:40px;
+    text-shadow: 2px 2px 3px rgb(65, 65, 65);
+  }

@@ -1,0 +1,16 @@
+<ng-container *ngIf="vanTartalom; else kotelezoId">
+    <form (submit)="kikuldottAdat($event)">
+        <h2>Vegyél fel egy új elemet!</h2>
+        <input type="text" name="textBox">
+        <input type="submit" value="Felvesz!">
+    </form>
+</ng-container>
+
+<ng-template #kotelezoId>
+    <form (submit)="kikuldottAdat($event)">
+        <h2>Vegyél fel egy új elemet!</h2>
+        <input type="text" name="textBox">
+        <span>Töltse ki a mezőt!</span>
+        <input type="submit" value="Felvesz!">
+    </form>
+</ng-template> 
